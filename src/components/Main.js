@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
 import Month from "./organisms/Month/Month";
 import Typography from "@material-ui/core/Typography";
+import { useSelector } from "react-redux";
 
 const MONTHS = [
   "january",
@@ -18,8 +19,11 @@ const MONTHS = [
 ];
 
 const Main = () => {
-  const [months, setMonths] = useState("");
+  // const [months, setMonths] = useState("");
   const [currentMonth, setCurrentMonth] = useState("");
+
+  const months = useSelector((state) => state.months);
+  console.log("miesiace  reduxa w MAIN: ", months);
 
   let searchedMonth = null;
 
@@ -28,18 +32,18 @@ const Main = () => {
     searchedMonth = months.filter((month) => month.name == currentMonth);
   }
 
-  useEffect(() => {
-    console.log("zaladowalem sie ");
-    fetch("/database.json")
-      .then((response) => response.json())
-      .then((data) => setMonths(data.months));
-  }, []);
+  // useEffect(() => {
+  //   console.log("zaladowalem sie ");
+  //   fetch("/database.json")
+  //     .then((response) => response.json())
+  //     .then((data) => setMonths(data.months));
+  // }, []);
 
   return (
     <div>
       {console.log("months length: ", months.length)}
       {console.log("months: ", months)}
-      <Typography variant="h3">Jestem w Main</Typography>
+      {/* <Typography variant="h3">Jestem w Main</Typography> */}
       <label htmlFor="month">
         <select
           id="month"
@@ -55,7 +59,7 @@ const Main = () => {
         </select>
       </label>
 
-      <p>Wybrany miesiac: {currentMonth}</p>
+      {/* <p>Wybrany miesiac: {currentMonth}</p> */}
       {searchedMonth !== null && <Month month={searchedMonth[0]} />}
     </div>
   );

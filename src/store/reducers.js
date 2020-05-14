@@ -7,13 +7,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MONTH: {
-      console.log("action.payload z reduxa: ", action.payload);
-      console.log("ziterowany payload: ", [{ ...action.payload }]);
-      console.log("state.moths z reduxa:", state);
-      const newMonth = action.payload;
-      console.log("newMOnth: ", newMonth);
-      const newMONTHS = [...state.months, newMonth];
-      console.log("newMONTHS :", newMONTHS);
+      const newMONTHS = [...state.months, action.payload];
 
       return {
         ...state,
@@ -25,9 +19,6 @@ const reducer = (state = initialState, action) => {
       return { ...state };
     }
   }
-  //   console.log(action);
-  //   console.log(state);
-  //   return state;
 };
 
 export default reducer;
