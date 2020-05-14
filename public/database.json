@@ -1,0 +1,58 @@
+{
+    "months": [
+      {
+        "name": "may",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "april",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 789,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          },
+          {
+            "name": "Car insurance",
+            "price": 420,
+            "payday": 5,
+            "automatic": false
+          }
+        ]
+      }
+    ]
+  }
