@@ -1,6 +1,9 @@
 import React from "react";
 
 const Month = ({ month }) => {
+  const newMonth = [{ ...month }];
+  console.log("newMOnth: ", newMonth);
+
   return (
     <div>
       <h4>{month.name}</h4>

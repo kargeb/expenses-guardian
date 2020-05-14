@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { TextField, Paper, Box, Container } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import AppBar from "@material-ui/core/AppBar";
@@ -8,10 +8,28 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
+import { useDispatch } from "react-redux";
+import { ADD_MONTH } from "./../store/reducers";
+
 import Main from "../components/Main";
 import NewExpense from "../components/organisms/NewExpense/NewExpense";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log("Use EFFECT z APP do Reduxa ");
+    fetch("/database.json")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("data z reducowego usestate", data);
+        data.months.forEach((month) => {
+          console.log("month z usetstate reuxowego: ", month);
+          dispatch({ type: ADD_MONTH, payload: month });
+        });
+      });
+  }, [dispatch]);
+
   return (
     <div>
       <AppBar position="static">
