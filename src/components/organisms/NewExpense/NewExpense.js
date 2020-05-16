@@ -36,6 +36,8 @@ const NewExpense = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [pickedMonths, setPickedMonths] = useState([]);
+  const [isAutomatic, setIsAutomatic] = useState(true);
+  const [payday, setPayday] = useState(15);
   const [isSummaryVisible, setSummaryVisibility] = useState(false);
   const dispatch = useDispatch();
 
@@ -82,6 +84,7 @@ const NewExpense = () => {
           <FormGroup row>
             {MONTHS.map((month) => (
               <FormControlLabel
+                key={month}
                 control={
                   <Checkbox
                     // checked={state.checkedB}
@@ -102,24 +105,6 @@ const NewExpense = () => {
           Check all
         </Button>
 
-        {/* <InputLabel htmlFor="outlined-age-native-simple">Miesiąc</InputLabel>
-          <Select
-            native
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-            label="Miesiąc"
-            // inputProps={{
-            //   name: "age",
-            //   id: "outlined-age-native-simple",
-            // }}
-          >
-            <option aria-label="None" value="" />
-            {MONTHS.map((month) => (
-              <option key={month} value={month}>
-                {month}
-              </option>
-            ))}
-          </Select> */}
         <TextField
           id="outlined-basic"
           label="Nazwa wydatku"
@@ -140,6 +125,29 @@ const NewExpense = () => {
           />
           <FormHelperText id="standard-weight-helper-text">Cena</FormHelperText>
         </FormControl>
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={isAutomatic}
+              onChange={(e) => setIsAutomatic(e.target.checked)}
+              name="automatic"
+            />
+          }
+          label="Automatyczna spłata"
+        />
+        <InputLabel htmlFor="outlined-age-native-simple">Miesiąc</InputLabel>
+        <Select
+          native
+          value={payday}
+          onChange={(e) => setPayday(e.target.value)}
+          label="Miesiąc"
+          // inputProps={{
+          //   name: "age",
+          //   id: "outlined-age-native-simple",
+          // }}
+        >
+          <option aria-label="None" value="" />
+        </Select>
         <Button
           type="submit"
           variant="contained"
