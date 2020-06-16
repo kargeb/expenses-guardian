@@ -33,8 +33,8 @@ const MONTHS = [
 
 const NewExpense = () => {
   // const [month, setMonth] = useState("");
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
+  const [name, setName] = useState("pisq");
+  const [price, setPrice] = useState("20");
   const [pickedMonths, setPickedMonths] = useState([]);
   const [isAutomatic, setIsAutomatic] = useState(true);
   const [payday, setPayday] = useState(15);
@@ -44,11 +44,14 @@ const NewExpense = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // console.log("poszedl submit: ", month, name, price);
-    // const newExpense = { month, name, price };
+    pickedMonths.map((month) => {
+      const update = {
+        name: month,
+        expenses: [{ name, price, automatic: isAutomatic }],
+      };
 
-    // setSummaryVisibility(true);
-    // dispatch({ type: ADD_EXPENSE, payload: newExpense });
+      dispatch({ type: ADD_EXPENSE, payload: update });
+    });
   };
 
   const handleCheckboxes = (e) => {

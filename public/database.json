@@ -181,7 +181,7 @@
         ]
       },
       {
-        "name": "semptember",
+        "name": "september",
         "year": 2020,
         "expenses": [
           {
@@ -199,6 +199,30 @@
           {
             "name": "Eduweb",
             "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "october",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 590,
             "payday": 3,
             "automatic": true
           }

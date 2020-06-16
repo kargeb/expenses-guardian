@@ -16,46 +16,25 @@ const reducer = (state = initialState, action) => {
       };
     }
     case ADD_EXPENSE: {
-      console.log("akcja ADD_EZXPENSE - payload: ", action.payload);
+      const oldMonths = [];
+      const newMonth = [];
 
-      const currentMonth = action.payload;
-      let pickedMonth = null;
-      let otherMonths = [];
-
-      console.log("current month name:", currentMonth.name);
-      // console.log("current month name:", currentMonth.name);
-
-      otherMonths = state.months.filter((month) => {
-        console.log("month name z petli:", month.name);
-        if (month.name == currentMonth.month) {
-          console.log("JESTEEEEEEM");
-          pickedMonth = JSON.parse(JSON.stringify(month));
-          return false;
+      state.months.forEach((month) => {
+        if (month.name != action.payload.name) {
+          oldMonths.push(month);
         } else {
-          return true;
+          newMonth.push(month);
         }
       });
 
-      console.log("picked month: ", pickedMonth);
-      console.log("otherMOnths: ", otherMonths);
-
-      const newExpense = {
-        name: currentMonth.name,
-        price: currentMonth.price,
+      const updatedMonth = {
+        ...newMonth[0],
+        expenses: [...newMonth[0].expenses, ...action.payload.expenses],
       };
-
-      console.log("new Expense: ", newExpense);
-
-      console.log("picked mont expsnbense: ", pickedMonth.expenses);
-      pickedMonth.expenses = [...pickedMonth.expenses, newExpense];
-      console.log("NOWEEE picked mont expsnbense: ", pickedMonth.expenses);
-
-      const newDB = [...otherMonths, pickedMonth];
-      console.log("new DB : ", newDB);
 
       return {
         ...state,
-        months: newDB,
+        months: [...oldMonths, updatedMonth],
       };
     }
     default: {
