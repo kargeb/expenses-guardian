@@ -14,13 +14,14 @@ const MONTHS = [
   "july",
   "august",
   "september",
+  "october",
   "november",
   "december",
 ];
 
 const Main = () => {
   // const [months, setMonths] = useState("");
-  const [currentMonth, setCurrentMonth] = useState("");
+  const [currentMonth, setCurrentMonth] = useState("may");
 
   const months = useSelector((state) => state.months);
   console.log("miesiace  reduxa w MAIN: ", months);
@@ -48,6 +49,7 @@ const Main = () => {
         <select
           id="month"
           name="month"
+          value={currentMonth}
           style={{ textTransform: "capitalize" }}
           onChange={(e) => setCurrentMonth(e.target.value)}
         >

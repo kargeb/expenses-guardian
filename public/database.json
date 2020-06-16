@@ -1,15 +1,45 @@
 {
     "months": [
       {
-        "name": "may",
+        "name": "january",
         "year": 2020,
         "expenses": [
           {
-            "name": "Netlifx",
-            "price": 15,
-            "payday": 20,
-            "automatic": true
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
           },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "february",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "march",
+        "year": 2020,
+        "expenses": [
           {
             "name": "Credit on card",
             "price": 80,
@@ -51,6 +81,198 @@
             "price": 420,
             "payday": 5,
             "automatic": false
+          }
+        ]
+      },
+      {
+        "name": "may",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "june",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "july",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "august",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "september",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "october",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 590,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "november",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
+          }
+        ]
+      },
+      {
+        "name": "december",
+        "year": 2020,
+        "expenses": [
+          {
+            "name": "Netlifx",
+            "price": 15,
+            "payday": 20,
+            "automatic": true
+          },
+          {
+            "name": "Credit on card",
+            "price": 80,
+            "payday": 23,
+            "automatic": false
+          },
+          {
+            "name": "Eduweb",
+            "price": 59,
+            "payday": 3,
+            "automatic": true
           }
         ]
       }
